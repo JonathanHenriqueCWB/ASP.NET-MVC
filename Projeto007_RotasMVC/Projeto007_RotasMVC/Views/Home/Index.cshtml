@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Projeto007_RotasMVC.Models.Noticia>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Rotas em ASP.NET MVC</h2>
+
+<div>
+    <ul>
+        @foreach (string item in ViewBag.Categorias) { //ViewBag está trazendo da action Index todas as categorias das notícias
+            <li>
+                @Html.ActionLink(item , "MostraCategoria" , "Home", new {@categoria = item}, null)
+            </li>
+        }
+    </ul>
+</div>
+
+<div>
+    <ul>
+        @foreach(var item in Model) {// A cada looping item será uma notícia diferente
+            <li>
+                @Html.ActionLink(item.Titulo, "MostraNoticia" , "Home" , new { //new envia para o metodo MostrarNoticia os parametros
+                    @noticiaId = item.NoticiaId,
+                    @categoria = item.Categoria.ToLower(),
+                    @titulo = item.Titulo.ToLower()
+                }, null)
+
+                <em>@Html.DisplayFor(modelItem => item.Categoria)</em>
+                <b>@Html.DisplayFor(modelItem => item.Data)</b>
+
+            </li>
+         }
+    </ul>
+</div>
+
+<div>
+    @Html.ActionLink("TODAS AS NOTÍCIAS" , "TodasAsNoticias" , "Home")
+</div>

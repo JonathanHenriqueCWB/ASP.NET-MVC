@@ -1,0 +1,23 @@
+﻿<!--Recebe uma array do tipo IEnumerable com uma coleçaõ de Noticias-->
+@model IEnumerable<Projeto007_RotasMVC.Models.Noticia>
+@{
+    ViewBag.Title = "TodasAsNoticias";
+}
+
+<h2>Todas as noticias</h2>
+
+<div>
+    <ul>
+        @foreach (var item in Model) {
+            <li>
+                @Html.ActionLink(item.Titulo, "MostrarNoticia" , "Home", new {
+                    
+                    @noticiaId = item.NoticiaId,
+                    @categoria = item.Categoria,
+                    @titulo = item.Titulo    
+                },null)
+            </li>
+        }
+    </ul>
+</div>
+

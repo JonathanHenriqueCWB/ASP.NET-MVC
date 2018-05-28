@@ -1,0 +1,21 @@
+﻿@{
+    /*
+     * View pode utilizar a tecnologia Razor para juntar Html e C#
+     * View erdam o layou padrao, localizado na pasta View/Shared/_Layout
+     * _Layout pode ser configurado, ou nao utilizado em uma view
+     */
+
+    //Definindo um variavel global de nome Title
+    ViewBag.Title = "Contar";
+}
+
+@{ /*ViewBag.Title foi definido dentro do controler responsavel pela criação da view */ }
+<h2>@ViewBag.Title - @ViewBag.Message</h2>
+
+@{ 
+    for(int i=0; i<=10; i++)
+    {
+        <p class="alert-success">@i</p>
+    }
+}
+

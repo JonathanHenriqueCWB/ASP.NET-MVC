@@ -1,0 +1,82 @@
+﻿@model Projeto006_Validacao.Models.Pessoa
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h2>Formulário de Cadastro</h2>
+
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+    
+<fieldset>
+    <legend>Insira os dados no Formulário</legend>
+
+    <div>
+        @Html.LabelFor(model => model.Nome)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Nome)<br />
+        @Html.ValidationMessageFor(model => model.Nome)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Sexo)
+    </div>
+    <div>
+        @Html.RadioButtonFor(m => m.Sexo, "Masculino") Masculino
+        @Html.RadioButtonFor(m => m.Sexo, "Feminino") Feminino<br />
+        @Html.ValidationMessageFor(model => model.Sexo)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Idade)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Idade)<br />
+        @Html.ValidationMessageFor(model => model.Idade)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Email)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Email)<br />
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Login)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Login)<br />
+        @Html.ValidationMessageFor(model => model.Login)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Senha)
+    </div>
+    <div>
+        @Html.PasswordFor(model => model.Senha)<br />
+        @Html.ValidationMessageFor(model => model.Senha)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.ComfirmaSenha)
+    </div>
+    <div>
+        @Html.PasswordFor(model => model.ComfirmaSenha)<br />
+        @Html.ValidationMessageFor(model => model.ComfirmaSenha)
+    </div>
+    <div>
+        <br /><input type="submit" value="Enviar" />
+    </div>
+</fieldset>
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")    
+}
+
+
+}

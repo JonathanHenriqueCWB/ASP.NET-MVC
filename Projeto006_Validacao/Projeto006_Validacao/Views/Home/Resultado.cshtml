@@ -1,0 +1,33 @@
+﻿@model Projeto006_Validacao.Models.Pessoa
+@{
+    ViewBag.Title = "Lista Dados";
+}
+
+<h2>Dados Cadastrados</h2>
+<fieldset>
+    <div>
+        @Html.DisplayNameFor(model => model.Nome)
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Sexo)
+        @Html.DisplayFor(model => model.Sexo)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Idade)
+        @Html.DisplayFor(model => model.Idade)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Email)
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Login)
+        @Html.DisplayFor(model => model.Login)
+    </div>
+    
+</fieldset>

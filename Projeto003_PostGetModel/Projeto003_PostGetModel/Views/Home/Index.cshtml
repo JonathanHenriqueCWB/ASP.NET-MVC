@@ -1,0 +1,28 @@
+﻿<!-- Recebendo um Objeto do controller do tipo objeto-->
+@model Projeto003_PostGetModel.Models.Pessoa 
+@{
+    ViewBag.Title = "Index";
+}
+
+<form method="post" action="Home/Lista">
+    <fieldset>
+        <legend>Pessoa</legend>
+
+        <div>
+            <label for="codigo">Código</label><br>
+            <input type="number" id="codigo" name="codigo" value="@Model.PessoaId" />
+        </div>
+
+        <div>
+            <label for="nome">Nome</label><br />
+            <input type="text" id="nome" name="nome" value="@Model.Nome" />
+        </div>
+        <div>
+            <label for="email">Email</label><br />
+            <input type="text" id="email" name="email" value="@Model.Email" />
+        </div>
+
+        <p><br /><input type="submit" value="Enviar" /></p>
+
+    </fieldset>
+</form>

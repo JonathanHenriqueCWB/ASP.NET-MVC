@@ -1,0 +1,26 @@
+﻿<!--Tranformando essa clase em TIPADA para receber um objeto -->
+@model Projeto003_PostGetModel.Models.Pessoa
+@{
+    ViewBag.Title = "Lista";
+}
+
+<div>
+    <b>@Html.LabelFor( x => x.Nome)</b>
+</div>
+<div>
+    @Model.Nome
+</div>
+
+<div>
+    <b>@Html.LabelFor( x => x.Email)</b>
+</div>
+<div>
+    @Model.Email
+</div>
+
+<div>
+    <b>@Html.LabelFor(x => x.PessoaId)</b>
+</div>
+<div>
+    @Model.PessoaId
+</div>

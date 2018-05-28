@@ -1,0 +1,52 @@
+﻿@model Projeto005_Validacao.Models.Pessoa
+@{
+    ViewBag.Title = "Lista dados pessoa valida";
+}
+
+<h2>Lista os dados da pessoa</h2>
+<fieldset>
+
+    <legend>Pessoa</legend>
+
+    <div>  
+        <!--Helper mostra o nome da propriedade-->
+        @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div>
+        <!--Helper mostra o valor da propriedade-->
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Observacao)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Observacao)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Idade)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Idade)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Login)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Login)
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("VOLTAR", "Index", "Pessoa")
+</p>
+

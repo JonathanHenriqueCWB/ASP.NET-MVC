@@ -1,0 +1,22 @@
+﻿@model Projeto004_PostGetModel.Models.Pessoa
+@{
+    ViewBag.Title = "Visualizar";
+}
+
+<h2>Cadastro realizado com sucesso!!!</h2>
+
+<ul>
+    <li>
+        @Html.LabelFor(x => x.Nome)
+        @Model.Nome
+    </li>
+    <li>
+        @Html.LabelFor(x => x.Sobrenome)
+        @Model.Sobrenome
+    </li>
+    <li>
+        @Html.LabelFor(x => x.Email)
+        @Model.Email
+    </li>
+</ul>
+
